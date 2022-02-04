@@ -8,17 +8,12 @@ import org.springframework.stereotype.Component;
 import com.rabindra.app.Repo.EmployeeRepo;
 import com.rabindra.app.entity.*;
 
-@Component
+//@Component
 public class Starter {
 
 	@Autowired
 	EmployeeRepo empRepo;
 	
-	
-	//sab kura aaisakyo aba scheduling kina use garne because we are not going to display our data in rest api 
-	// and how will you display them with only the methods??
-	
-
 	public int getData() {
 		int count = empRepo.getCount();
 		
@@ -35,4 +30,16 @@ public class Starter {
 //		System.out.println("count"+getData());
 //		System.out.println("count"+getData());
 //	}
+	
+	public void finalMethod() {
+		int counttemp = 0;
+		System.out.println("total user"+getData());
+		if(counttemp != getData()) {
+			counttemp++;
+			System.out.println("All the users:"+getEmployees());
+		}else {
+			System.out.println("Data cant be fetched.");
+		}
+	}
+
 }
