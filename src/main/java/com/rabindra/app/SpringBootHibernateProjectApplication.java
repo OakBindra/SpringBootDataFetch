@@ -32,7 +32,8 @@ public class SpringBootHibernateProjectApplication implements CommandLineRunner{
 		
 //		System.out.println(starter.getEmployees());
 //		System.out.println(applicationContext.getId());
-		System.out.println(starter.finalMethod());
+//		System.out.println(starter.finalMethod());
+		starter.finalMethod();
 
 //		MyBean myBean = applicationContext.getBean(MyBean.class);
 //		System.out.println(myBean.getApplicationId());

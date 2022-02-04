@@ -33,12 +33,13 @@ public class Starter {
 //		System.out.println("count"+getData());
 //	}
 	
-//	@Scheduled(fixedDelayString = "180000", initialDelay = 10000)
-	@Scheduled(cron="* * * * * *")
+	@Scheduled(fixedDelayString = "180000", initialDelay = 10000)
+//	@Scheduled(cron="* * * * * *")
 	public void finalMethod() {
 		
 		int count = getData();
 		if(count != counttemp) {
+			counttemp++;
 			System.out.println("Fetching all users data");
 			System.out.println("All the users:"+getEmployees());
 		}else {
