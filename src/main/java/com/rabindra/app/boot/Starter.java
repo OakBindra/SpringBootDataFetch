@@ -13,7 +13,7 @@ public class Starter {
 
 	@Autowired
 	EmployeeRepo empRepo;
-	
+	int counttemp = 0;
 	public int getData() {
 		int count = empRepo.getCount();
 		
@@ -31,14 +31,15 @@ public class Starter {
 //		System.out.println("count"+getData());
 //	}
 	
+	 @Scheduled(fixedDelayString = "180000", initialDelay = 10000)
 	public void finalMethod() {
-		int counttemp = 0;
-		System.out.println("total user"+getData());
-		if(counttemp != getData()) {
-			counttemp++;
+		
+		int count = getData();
+		if(count != counttemp) {
+			System.out.println("Fetching all users data");
 			System.out.println("All the users:"+getEmployees());
 		}else {
-			System.out.println("Data cant be fetched.");
+			System.out.println("Count is Same so not Fetching");
 		}
 	}
 
