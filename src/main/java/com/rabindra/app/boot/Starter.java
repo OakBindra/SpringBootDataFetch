@@ -10,6 +10,7 @@ import com.rabindra.app.Repo.EmployeeRepo;
 import com.rabindra.app.entity.*;
 
 @Component
+//here component is also needed otherwise main app wont be able to find it.
 public class Starter {
 
 	@Autowired
